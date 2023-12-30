@@ -7,7 +7,8 @@ import HomeScreen from './Home';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ActivityIndicator } from 'react-native-paper';
 import LoadingScreen from './LoadingScreen';
-import AirportBookingPage from './Screens/BookingForm';
+import AirportBookingPage from './BookingForm';
+import AddTask from './AddTask';
 
 const Stack = createStackNavigator();
 
@@ -16,7 +17,7 @@ const AppNavigator = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Loading" component={LoadingScreen} />
-      <Stack.Screen name="Home" component={AirportBookingPage} />
+      <Stack.Screen name="Home" component={AddTask} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Signup" component={SignupScreen} />
         {/* {
